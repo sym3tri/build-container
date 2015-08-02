@@ -1,0 +1,24 @@
+# container for building "build-container" demo angular app
+# quay.io/sym3tri/builder-container-demo
+
+FROM golang:1.4.2-cross
+MAINTAINER Ed Rooth - CoreOS
+
+# golang tools
+# this could be anything your backend build process requires
+RUN go get golang.org/x/tools/cmd/cover
+RUN go get golang.org/x/tools/cmd/vet
+RUN go get github.com/tools/godep
+
+# nodejs and web build tools
+RUN echo deb http://ftp.us.debian.org/debian sid main > /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get install --no-install-recommends -y -q sudo wget jq npm
+RUN ln -s /usr/bin/nodejs /usr/bin/node
+
+# node specific build tools
+RUN npm install -g gulp bower
+
+# all project npm modules
+ADD package.json /opt/builder/package.json
+RUN cd /opt/builder && npm install

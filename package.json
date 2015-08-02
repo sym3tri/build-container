@@ -1,0 +1,31 @@
+{
+  "name": "build-container",
+  "description": "build-container",
+  "repository": "https://github.com/sym3tri/build-container",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-angular-filesort": "latest",
+    "del": "latest",
+    "gulp-concat": "latest",
+    "gulp-eslint": "latest",
+    "gulp-inject": "latest",
+    "gulp-karma": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-ng-annotate": "latest",
+    "gulp-ng-html2js": "latest",
+    "gulp-uglify": "latest",
+    "gulp-clean": "latest",
+    "karma-chrome-launcher": "latest",
+    "karma-jasmine": "latest",
+    "main-bower-files": "latest",
+    "merge-stream": "latest",
+    "run-sequence": "latest",
+    "preen": "~1.2.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

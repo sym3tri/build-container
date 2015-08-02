@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Build Container Demo App</title>
+    <!-- style:css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- endinject -->
+    <base href="/">
+  </head>
+
+  <body>
+    <div id="view-container" class="container" ng-view></div>
+
+    <!-- deps:js -->
+    <script src="deps/lodash.js"></script>
+    <script src="deps/jquery.js"></script>
+    <script src="deps/angular.js"></script>
+    <script src="deps/angular-route.js"></script>
+    <!-- endinject -->
+
+    <!-- app:js -->
+    <script src="app.js"></script>
+    <script src="pages/hello-ctrl.js"></script>
+    <script src="pages/contact-ctrl.js"></script>
+    <script src="dist/templates.js"></script>
+    <!-- endinject -->
+  </body>
+</html>

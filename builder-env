@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+export BUILDER_IMAGE=quay.io/sym3tri/build-container-demo:latest
+export PROJECT_REPO=github.com/sym3tri/build-container

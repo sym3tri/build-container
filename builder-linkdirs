@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+if [ -d "/opt/builder/node_modules" ]; then
+    ln -s /opt/builder/node_modules ./node_modules
+else
+    echo "could not find /opt/builder/node_modules, are you running from the right docker image?"
+    exit 1
+fi
